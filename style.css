@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding:0 
+	box-sizing: border-box;
+}
+body {
+	font-size: 18px;
+	font-family: 'Space Grotesk', sans-serif;
+	/*position: relative;*/
+}
+/***BANK CARDS*/
+.cards {
+	z-index: 100;
+	position: absolute;
+	top: 100px;
+	left: 20%;
+	/*display: flex;
+	align-items: flex-start;
+	justify-content: center;*/
+}
+.bank-cards {
+	/*position: absolute;
+	top: 100px;
+	left:10%;
+	padding: 20px;
+	border: 2px solid aqua;
+	z-index: 90;*/
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*justify-items: center;*/
+	gap:  50px;
+border: 2px solid blue;
+width: 50%;
+
+}
+.bank-card--front {
+	/*position: absolute;
+	z-index: 100;
+	top: 100px;
+	left:  10%;*/
+	
+
+}
+.bankFront-img,
+.bankBack-img {
+		/*width: 300px;*/
+		height: 200px;
+	}
+/*.bankFront-img {
+	height: 200px;
+}*/
+.bank-card--back {
+	/*position: absolute;
+	left: 15%;*/
+	/*position: absolute;
+	z-index: 100;
+	top: 340px;
+	left: 15%;*/
+	margin-left: 45%;
+	display: flex;
+	align-items: end;
+	justify-content: end;
+}
+.bankBack-img {
+	height: 200px;
+}
+
+	/****CONTAINER*/
+.container {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+/***CONTAINER -left*/
+.container-left {
+	width: 30%;
+	height: 100vh;
+
+}
+.bg-desktop--img {
+	/*object-fit: cover;*/
+	height: 100%;
+	width: 100%;
+
+}
+.background-img {
+
+}
+/***CONTAINER -RIGHT*/
+.container-right {
+	width: 70%;
+	
+}
+.payment-display {
+	display:  block;
+}
+.payment-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	
+}
+label {
+	text-transform: uppercase;
+	word-spacing: 2px;
+	
+}
+
+input {
+	font-family: 'Space Grotesk', sans-serif;
+	padding: 8px;
+	border-radius: 8px;
+	/*margin: 5px 0 0px;*/
+	border: 1px solid hsl(279, 6%,55%);
+	width: 290px;
+
+}
+#fullName {
+	margin-bottom: 20px;
+}
+.inputExpDate {
+	width: 60px;
+}
+.inputCvc {
+	width: 100px;
+}
+/*p {
+	margin: 5px 0 20px;
+}*/
+
+form {
+	display: flex;
+	flex-direction: column;
+	gap:  20px;
+
+}
+.furtherCard-info {
+	display: flex;
+	align-items: center;
+	/*justify-content: space-between;*/
+	gap:  30px;
+	margin-top: 20px;
+}
+.btn {
+	font-family: 'Space Grotesk', sans-serif;
+	width: 310px;
+	padding: 10px 20px;
+	margin-top: 30px;
+	background-color: hsl(278, 68%, 11%);
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+/***ERROR DETAILS***/
+.error-text {
+	font-size: 10px;
+	color: hsl(0, 100%, 66%);
+	display: none;
+}
+.error {
+	border: 1px solid hsl(0, 100%, 66%);
+}
+
+/***RESULT PAGE*/
+.result-page {
+	display: none;
+	text-align: center;
+}
+h2 {
+	margin: 20px 0 10px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.result-page > p {
+	color: hsl(279, 6%, 55%);
+	margin-bottom: 40px;
+}
+.btn-continue {
+	font-family: 'Space Grotesk', sans-serif;
+	width: 300px;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: hsl(278, 68%, 11%);
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+}
+
+
+
+.attribution { 
+	font-size: 11px; 
+	text-align: center; 
+}
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width:  1300px)
+
+ {
+ 	.cards {
+	z-index: 100;
+	position: absolute;
+	top: 250px;
+	left: 20%;
+}
+	/*.bank-card--front {
+		top: 132px;
+		left: 10px;
+		
+		z-index: 150;
+	}
+	
+	.bank-card--back {
+		top:  20px;
+		left: 60px;
+		
+	}*/
+}
+@media screen and (max-width:  900px) 
+{
+	.cards {
+	z-index: 100;
+	position: absolute;
+	top: 300px;
+	left: 10%;
+}
+	.bankFront-img,
+	.bankBack-img {
+		width: 250px;
+		height: 200px;
+	}
+	/*.bank-card--front {
+		top: 30%;
+		left: 5%;
+		
+	}
+	
+	.bank-card--back {
+		top:  52%;
+		left: 10%;
+		
+	}*/
+}
+
+@media screen and (max-width: 375px) {
+	.bankFront-img,
+	.bankBack-img {
+		width: 300px;
+		height: 200px;
+	}
+	.bank-card--front {
+		top: 132px;
+		left: 10px;
+		
+		z-index: 150;
+	}
+	
+	.bank-card--back {
+		top:  20px;
+		left: 60px;
+		
+	}
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 350px;
+	}
+	.container-left,
+	.container-right {
+		width: 100%;
+	}
+	.container-left {
+		height: 0vh;
+	}
+	.bg-desktop--img {
+		width: 100%;
+		height: 270px;
+	}
+}

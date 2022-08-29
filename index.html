@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  
+</head>
+<body>
+  <div class="cards">
+  <div class="bank-cards">
+    <div class="bank-card--front">
+      <img src="images/bg-card-front.png" alt="bank card front" class="bankFront-img">
+    </div>
+
+    <div class="bank-card--back">
+      <img src="images/bg-card-back.png" alt="bank card back" class="bankBack-img">
+    </div>
+  </div>
+</div>
+
+  <section class="container">
+    <div class="container-left">
+      <picture>
+        <source src="images/bg-main-mobile.png, images/bg-main-desktop.png" class="background-img" 
+        media="(max-width: 375px)">
+        <img srcset="images/bg-main-desktop.png"  class="bg-desktop--img">
+      </picture>
+    </div>
+    
+    <div class="container-right">
+      <div class="payment-display">
+        <div class="payment-card">
+          <form id="paymentInfo">
+            <div class="form-content">
+              <label for="fullName" class="label-headings">Cardholder Name</label>
+              <br>
+              <input type="text" name="fullName" id="fullName" placeholder="e.g. Jane Appleseed" required autocomplete="off">
+              <br>
+              <label for="cardNum">Card Number</label>
+              <br>
+              <input type="text" name="cardNum" placeholder="e.g. 1234 5678 9123 0000" required id="cardNum">
+              <p class="error-text ">Wrong format, numbers only</p>
+            <div class="furtherCard-info">
+              <div class="exp-date">
+                <label>exp.date (mm/yy)</label>
+                <br>
+                <input class="inputExpDate" type="text" placeholder="MM" required>
+
+                <input class="inputExpDate" type="text" placeholder="YY" required>
+                <p class="error-text">Can't be blank</p>
+              </div>
+              <div class="cvc">
+                <label>cvc</label>
+                <br>
+                <input class="inputCvc" type="text" placeholder="e.g.123" required>
+                <p class="error-text">Can't be blank</p>
+
+              </div>
+
+            </div>
+          <button type="submit" form="paymentInfo" class="btn">Confirm</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+      <div class="result-page">
+        <img src="images/icon-complete.svg" alt="icon-complete" class="icon-complete">
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <button class="btn-continue">Continue</button>
+      </div>
+    </div>  
+  </div>
+  </div>
+    
+
+
+
+  </section>
+
+  
+
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">bc464</a>.
+  </div>
+</body>
+</html>
