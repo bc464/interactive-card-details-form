@@ -95,6 +95,7 @@ h5 {
 	display: flex;
 	align-items: center;
 	width: 100%;
+	
 }
 
 /***CONTAINER -left*/
@@ -130,6 +131,7 @@ label {
 	color: hsl(278, 68%, 11%);
 }
 
+
 input {
 	font-family: 'Space Grotesk', sans-serif;
 	padding: 8px;
@@ -141,7 +143,8 @@ input {
 #fullName {
 	margin-bottom: 20px;
 }
-.inputExpDate {
+.inputExpDate,
+.inputExpYear {
 	width: 60px;
 }
 .inputCvc {
@@ -164,7 +167,7 @@ form {
 	font-family: 'Space Grotesk', sans-serif;
 	width: 310px;
 	padding: 10px 20px;
-	margin-top: 30px;
+	margin: 30px 0;
 	background-color: hsl(278, 68%, 11%);
 	color: #fff;
 	border: none;
@@ -173,13 +176,16 @@ form {
 }
 
 /***ERROR DETAILS***/
-.error-text {
+.error-text-cardNum,
+.error-text-expireDate,
+.error-text-inputCVC {
 	font-size: 10px;
 	color: hsl(0, 100%, 66%);
 	display: none;
 }
 .error {
-	border: 1px solid hsl(0, 100%, 66%);
+	border:  1px solid hsl(0, 100%, 66%);
+	/*display: none;*/
 }
 
 /***RESULT PAGE*/
@@ -310,6 +316,7 @@ form {
 		display: flex;
 		flex-direction: column;
 		gap: 380px;
+		margin-bottom: 30px;
 	}
 	.container-left,
 	.container-right {

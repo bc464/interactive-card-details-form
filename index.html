@@ -17,31 +17,31 @@
 </head>
 <body>
   <div class="cards">
-  <div class="bank-cards">
-    <div class="bank-card--front">
-      <img src="images/bg-card-front.png" alt="bank card front" class="bankFront-img">
-      <div class="card-layout">
-        <div class="card-info">
-          <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
-          <h2>0000 0000 0000 0000</h2>
-          <div class="card-name--info">
-            <h5>jane appleseed</h5>
-            <h5>00/00</h5>
+    <div class="bank-cards">
+      <div class="bank-card--front">
+        <img src="images/bg-card-front.png" alt="bank card front" class="bankFront-img">
+        <div class="card-layout">
+          <div class="card-info">
+            <img src="images/card-logo.svg" alt="card-logo" class="card-logo">
+            <h2>0000 0000 0000 0000</h2>
+            <div class="card-name--info">
+              <h5>jane appleseed</h5>
+              <h5>00/00</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-card--back">
+        <img src="images/bg-card-back.png" alt="bank card back" class="bankBack-img">
+        <div class="card-layout--back">
+          <div class="card-info--back">
+            <h5>000</h5>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="bank-card--back">
-      <img src="images/bg-card-back.png" alt="bank card back" class="bankBack-img">
-      <div class="card-layout--back">
-        <div class="card-info--back">
-          <h5>000</h5>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
 
   <section class="container">
     <div class="container-left">
@@ -59,43 +59,43 @@
             <div class="form-content">
               <label for="fullName" class="label-headings">Cardholder Name</label>
               <br>
-              <input type="text" name="fullName" id="fullName" placeholder="e.g. Jane Appleseed" required autocomplete="off">
+              <input type="text" name="fullName" id="fullName" placeholder="e.g. Jane Appleseed"  autocomplete="off" >
               <br>
               <label for="cardNum">Card Number</label>
               <br>
-              <input type="text" name="cardNum" placeholder="e.g. 1234 5678 9123 0000" required id="cardNum">
-              <p class="error-text ">Wrong format, numbers only</p>
+              <input id="cardNum" type="tel" name="cardNum" placeholder="e.g. 1234 5678 9123 0000" pattern="[0-9]{16}" >
+              <p class="error-text-cardNum ">Wrong format, numbers only</p>
             <div class="furtherCard-info">
               <div class="exp-date">
                 <label>exp.date (mm/yy)</label>
                 <br>
-                <input class="inputExpDate" type="text" placeholder="MM" required>
+                <input class="inputExpDate" type="text" placeholder="MM" pattern="[0-9]{2}" required>
 
-                <input class="inputExpDate" type="text" placeholder="YY" required>
-                <p class="error-text">Can't be blank</p>
+                <input class="inputExpYear" type="text" placeholder="YY" pattern="[0-9]{2}" required>
+                <p class="error-text-expireDate">Can't be blank</p>
               </div>
               <div class="cvc">
                 <label>cvc</label>
                 <br>
-                <input class="inputCvc" type="text" placeholder="e.g.123" required>
-                <p class="error-text">Can't be blank</p>
+                <input class="inputCvc" type="text" placeholder="e.g.123" pattern="[0-9]{3}" required>
+                <p class="error-text-inputCVC">Can't be blank</p>
               </div>
             </div>
-          <button type="submit" form="paymentInfo" class="btn">Confirm</button>
+            <button type="submit" form="paymentInfo" class="btn">Confirm</button>
+          </div>
+        </form>
+      </div>
+    </div>
+<!-- RESULT PAGE -->
+        <div class="result-page">
+          <img src="images/icon-complete.svg" alt="icon-complete" class="icon-complete">
+          <h1>Thank you!</h1>
+          <p>We've added your card details</p>
+          <button class="btn-continue">Continue</button>
         </div>
-      </form>
+      </div>  
     </div>
   </div>
-<!-- RESULT PAGE -->
-      <div class="result-page">
-        <img src="images/icon-complete.svg" alt="icon-complete" class="icon-complete">
-        <h1>Thank you!</h1>
-        <p>We've added your card details</p>
-        <button class="btn-continue">Continue</button>
-      </div>
-    </div>  
-  </div>
-</div>
 </section>
   
   <div class="attribution">
