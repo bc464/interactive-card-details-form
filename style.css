@@ -6,65 +6,81 @@
 body {
 	font-size: 18px;
 	font-family: 'Space Grotesk', sans-serif;
-	/*position: relative;*/
 }
 /***BANK CARDS*/
 .cards {
 	z-index: 100;
 	position: absolute;
-	top: 100px;
+	top: 110px;
 	left: 20%;
-	/*display: flex;
-	align-items: flex-start;
-	justify-content: center;*/
 }
 .bank-cards {
-	/*position: absolute;
-	top: 100px;
-	left:10%;
-	padding: 20px;
-	border: 2px solid aqua;
-	z-index: 90;*/
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*justify-items: center;*/
-	gap:  50px;
-border: 2px solid blue;
-width: 50%;
-
+	gap:  30px;
+	width: 50%;
+	position: relative;
 }
-.bank-card--front {
-	/*position: absolute;
-	z-index: 100;
-	top: 100px;
-	left:  10%;*/
-	
 
-}
 .bankFront-img,
 .bankBack-img {
 		/*width: 300px;*/
 		height: 200px;
 	}
-/*.bankFront-img {
-	height: 200px;
-}*/
+
 .bank-card--back {
-	/*position: absolute;
-	left: 15%;*/
-	/*position: absolute;
-	z-index: 100;
-	top: 340px;
-	left: 15%;*/
-	margin-left: 45%;
+	margin-left: 75%;
 	display: flex;
 	align-items: end;
 	justify-content: end;
+	position: relative;
 }
 .bankBack-img {
 	height: 200px;
 }
+
+/***bank card info --front****/
+.card-layout {
+	position: absolute;
+	top: 0;
+	width: 170%;
+	padding: 15px 5px 20px 20px;
+	font-family: 'Space Grotesk', sans-serif;
+}
+.card-logo {
+	width: 25%;
+	margin-bottom: 25px;
+}
+h2 {
+	font-size: 25px;
+	
+	margin-top: 20px;
+}
+h2,
+h5 {
+	color: #fff;
+	font-weight: normal;
+}
+h5 {
+	margin-top: 15px;
+	text-transform: uppercase;
+	color: hsl(270, 3%, 87%);
+
+}
+.card-name--info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/***bank card info --back*/
+.card-layout--back {
+	position: absolute;
+	top: 72px;
+	right: 40px;
+
+}
+
 
 	/****CONTAINER*/
 .container {
@@ -77,13 +93,10 @@ width: 50%;
 .container-left {
 	width: 30%;
 	height: 100vh;
-
 }
 .bg-desktop--img {
-	/*object-fit: cover;*/
 	height: 100%;
 	width: 100%;
-
 }
 .background-img {
 
@@ -91,7 +104,6 @@ width: 50%;
 /***CONTAINER -RIGHT*/
 .container-right {
 	width: 70%;
-	
 }
 .payment-display {
 	display:  block;
@@ -101,22 +113,22 @@ width: 50%;
 	align-items: center;
 	justify-content: center;
 	padding: 20px;
-	
 }
 label {
 	text-transform: uppercase;
 	word-spacing: 2px;
-	
+	letter-spacing: 2px;
+	font-size: 12px;
+	color: hsl(278, 68%, 11%);
 }
 
 input {
 	font-family: 'Space Grotesk', sans-serif;
 	padding: 8px;
 	border-radius: 8px;
-	/*margin: 5px 0 0px;*/
 	border: 1px solid hsl(279, 6%,55%);
 	width: 290px;
-
+	margin-top: 5px;
 }
 #fullName {
 	margin-bottom: 20px;
@@ -127,20 +139,16 @@ input {
 .inputCvc {
 	width: 100px;
 }
-/*p {
-	margin: 5px 0 20px;
-}*/
+
 
 form {
 	display: flex;
 	flex-direction: column;
 	gap:  20px;
-
 }
 .furtherCard-info {
 	display: flex;
 	align-items: center;
-	/*justify-content: space-between;*/
 	gap:  30px;
 	margin-top: 20px;
 }
@@ -171,7 +179,7 @@ form {
 	display: none;
 	text-align: center;
 }
-h2 {
+.result-page > h1 {
 	margin: 20px 0 10px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -210,21 +218,16 @@ h2 {
 	top: 250px;
 	left: 20%;
 }
-	/*.bank-card--front {
-		top: 132px;
-		left: 10px;
-		
-		z-index: 150;
-	}
 	
-	.bank-card--back {
-		top:  20px;
-		left: 60px;
-		
-	}*/
 }
 @media screen and (max-width:  900px) 
 {
+	.container-left {
+		width: 40%;
+	}
+	.container-right {
+		width: 60%;
+	}
 	.cards {
 	z-index: 100;
 	position: absolute;
@@ -233,20 +236,9 @@ h2 {
 }
 	.bankFront-img,
 	.bankBack-img {
-		width: 250px;
-		height: 200px;
-	}
-	/*.bank-card--front {
-		top: 30%;
-		left: 5%;
-		
+		width: 340px;
 	}
 	
-	.bank-card--back {
-		top:  52%;
-		left: 10%;
-		
-	}*/
 }
 
 @media screen and (max-width: 375px) {
