@@ -14,7 +14,6 @@ body {
 	position: absolute;
 	top: 110px;
 	left: 20%;
-
 }
 .bank-cards {
 	display: flex;
@@ -23,16 +22,13 @@ body {
 	gap:  30px;
 	width: 50%;
 	position: relative;
-
 }
 
 .bankFront-img,
 .bankBack-img {
-		/*width: 300px;*/
 		height: 200px;
 		box-shadow:  2px 4px 18px rgba(0, 0, 0, 0.2);
-		
-	}
+}
 
 .bank-card--back {
 	margin-left: 75%;
@@ -62,7 +58,6 @@ body {
 }
 h2 {
 	font-size: 23px;
-	
 	margin-top: 20px;
 }
 h2,
@@ -86,16 +81,13 @@ h5 {
 	position: absolute;
 	top: 72px;
 	right: 40px;
-
 }
 
-
-	/****CONTAINER*/
+/****CONTAINER*****/
 .container {
 	display: flex;
 	align-items: center;
 	width: 100%;
-	
 }
 
 /***CONTAINER -left*/
@@ -107,9 +99,7 @@ h5 {
 	height: 100%;
 	width: 100%;
 }
-.background-img {
 
-}
 /***CONTAINER -RIGHT*/
 .container-right {
 	width: 70%;
@@ -130,8 +120,6 @@ label {
 	font-size: 12px;
 	color: hsl(278, 68%, 11%);
 }
-
-
 input {
 	font-family: 'Space Grotesk', sans-serif;
 	padding: 8px;
@@ -185,7 +173,6 @@ form {
 }
 .error {
 	border:  1px solid hsl(0, 100%, 66%);
-	/*display: none;*/
 }
 
 /***RESULT PAGE*/
@@ -213,8 +200,7 @@ form {
 	cursor: pointer;
 }
 
-
-
+/***atribution*****/
 .attribution { 
 	font-size: 11px; 
 	text-align: center; 
@@ -227,14 +213,13 @@ form {
 
  {
  	.cards {
-	z-index: 100;
-	position: absolute;
-	top: 250px;
-	left: 20%;
+		z-index: 100;
+		position: absolute;
+		top: 250px;
+		left: 20%;
+	}
 }
 
-	
-}
 @media screen and (max-width:  900px) 
 {
 	.container {
@@ -247,10 +232,10 @@ form {
 		width: 60%;
 	}
 	.cards {
-	z-index: 100;
-	position: absolute;
-	top: 300px;
-	left: 10%;
+		z-index: 100;
+		position: absolute;
+		top: 300px;
+		left: 10%;
 	}
 	.card-info > h2 {
 		font-size: 20px;
@@ -259,8 +244,8 @@ form {
 	.bankBack-img {
 		width: 340px;
 	}
-	
 }
+
 @media screen and (max-width: 800px) {
 	.container {
 		gap:  120px;
@@ -276,7 +261,6 @@ form {
 	.bank-card--front {
 		top: 125px;
 		left: 5px;
-		
 		z-index: 150;
 	}
 	.cards {
@@ -289,7 +273,6 @@ form {
 	.bank-cards {
 		flex-direction: column-reverse;
 		width: 90%;
-
 	}
 	.bank-card--front {
 		margin-left: 5px;
@@ -297,7 +280,6 @@ form {
 	}
 	.bank-card--back {
 		margin-left: 50px;
-		
 	}
 	.card-layout {
 		top:  145px;
@@ -306,11 +288,9 @@ form {
 	.card-info > h2 {
 		font-size: 18px;
 	}
-		
 	.bank-card--back {
 		top:  20px;
 		left: 40px;
-		
 	}
 	.container {
 		display: flex;
@@ -329,5 +309,4 @@ form {
 		width: 100%;
 		height: 270px;
 	}
-	
 }

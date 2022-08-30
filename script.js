@@ -9,7 +9,8 @@ const errorCVC = document.querySelector(".error-text-inputCVC");
 
 const border = "1px solid red";
 const borderOld = "1px solid lightgrey"
-let pattern = "[0-9]{10}";
+
+// CHECKING FULLNAME FIELD
 
 const checkFullName = () => {
 	let valid = false;
@@ -23,9 +24,11 @@ const checkFullName = () => {
 	return valid
 }
 
+// CHECKING CARD NUMBER FIELD
+
 const checkCardNumber = () => {
 	let valid = false;
-	let numbers = /^[0-9]+$/
+	let numbers = /^\d{16}$/
 	if (!cardNumber.value.match(numbers)) {
 		
 		errorCardNum.style.display = "block";
@@ -39,6 +42,8 @@ const checkCardNumber = () => {
 	}
 	return valid;
 }
+
+// CHECKING EXPIRE DATE FIELD
 
 const checkExpireDate = () => {
 	let valid = false;
@@ -56,6 +61,9 @@ const checkExpireDate = () => {
 	}
 	return valid;
 }
+
+// CHECKING EXPIRE YEAR FIELD
+
 const checkExpireYear = () => {
 	let valid = false;
 	let numbers = /^\d{2}$/
@@ -72,6 +80,8 @@ const checkExpireYear = () => {
 	}
 	return valid;
 }
+
+// CHECKING CVC INPUT FIELD
 
 const checkInputCVC = () => {
 	let valid = false;
@@ -97,6 +107,7 @@ const resultPage = document.querySelector(".result-page");
 const confirmBtn = document.querySelector(".btn");
 const continueBtn = document.querySelector(".btn-continue");
 
+// CONFIRM BUTTON FUNCTION
 
 confirmBtn.addEventListener("click", function(e) {
 	e.preventDefault();
@@ -115,14 +126,10 @@ confirmBtn.addEventListener("click", function(e) {
 	displayPayment.style.display = "none";
 	resultPage.style.display = "block";
 	
-}
+	}
 });
 
-
-
-
-
-
+// CONTINUE BUTTON FUNCTION
 
 continueBtn.addEventListener("click", function(){
 	resultPage.style.display = "none";
@@ -133,5 +140,4 @@ continueBtn.addEventListener("click", function(){
 	expireYear.value = "";
 	inputCVC.value ="";
 	
-
 })
